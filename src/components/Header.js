@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, IconButton, Toolbar, Collapse } from "@material-ui/core";
 
-import SortIcon from "@material-ui/icons/Sort";
+import SortIcon from "@material-ui/icons/HomeOutlined";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Link as Scroll } from "react-scroll";
 
@@ -58,10 +58,11 @@ export default function Header() {
       <AppBar className={classes.appbar} elevation={0}>
         <Toolbar className={classes.appbarWrapper}>
           <h1 className={classes.appbarTitle}>Dom Polski</h1>
-
-          <IconButton>
-            <SortIcon className={classes.icon} />
-          </IconButton>
+          <Scroll to="header" smooth={true}>
+            <IconButton>
+              <SortIcon className={classes.icon} />
+            </IconButton>
+          </Scroll>
         </Toolbar>
       </AppBar>
       <Collapse
